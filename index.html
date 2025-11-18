@@ -11,8 +11,7 @@
 
 <body class="w-full h-full">
 
-    <div class="w-full h-full py-10 flex items-center px-40">
-        
+   <div class="w-full h-full py-10 flex items-center px-40 bg-white sticky top-0 z-50 shadow-md">
         <div class="pr-220">
             <p class="inter-semibold text-[28px]">Exclusive</p>
         </div>
@@ -26,43 +25,67 @@
             <a href="./basket.html" class="cursor-pointer"><img src="./shopping-cart.svg"></a>
             <a href="./login.html" class="cursor-pointer"><img src="./user.svg"></a>
         </div>
-
     </div>
-
     <div class="text-gray-300"><hr/></div>
 
-    <div class=" flex items-center gap-4 mt-20 mx-40">
-        <p class="w-5 h-11  rounded-md bg-[#DB4444]"></p>
-        <p class="text-[#DB4444] inter-medium ">Categories</p>
-    </div>
-    <div class="px-40 mt-5">
-        <p class="inter-semibold text-[40px]">Browse By Category</p>
-    </div>
-    <div class="flex mt-20 mx-40 gap-20 ">
-        <div class="border border-zinc-300 px-13 py-5 rounded-md cursor-pointer">
-            <img src="./Category-CellPhone.svg"/>
-            <p class="inter-light pl-2 pt-5 ">Tech</p>
+    <div class="flex items-center gap-4 mt-20 mx-40">
+    <p class="w-5 h-11 rounded-md bg-[#DB4444]"></p>
+    <p class="text-[#DB4444] inter-medium">Categories</p>
+</div>
+
+    <div class="mx-40 mt-10">
+        <div class="flex gap-10">
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Electronics">
+                <img src="./Category-CellPhone.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Electronics</p>
+            </div>
+            </button>
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Furniture">
+                <img src="./armchair-3.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Furniture</p>
+            </div>
+            </button>
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer  flex flex-col items-center justify-center" id="Toys">
+                <img src="./shapes.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Toys</p>
+                </div>
+            </button>
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer  flex flex-col items-center justify-center" id="Books">
+                <img src="./library-big.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Books</p>
+                </div>
+            </button>
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center"id="Beauty" >
+                <img src="./spray-can.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Beauty</p>
+            </div>
+            </button>
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Clothing">
+                <img src="./shirt.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Clothing</p>
+            </div>
+            </button>
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Sports">
+                <img src="./bike.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Sports</p>
+            </div>
+            </button>
+            <button>
+                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Groceries">
+                <img src="./apple.svg" class="w-12 h-12" />
+                <p class="inter-light pt-5 text-center">Groceries</p>
+            </div>
+            </button>
+            
         </div>
-        <div class="border border-zinc-300 px-13 py-5 rounded-md cursor-pointer">
-            <img src="./Category-Computer.svg"/>
-            <p class="inter-light  pt-5 ">Fashion</p>
-        </div>
-        <div class="border border-zinc-300 px-13 py-5 rounded-md cursor-pointer">
-            <img src="./Category-SmartWatch.svg"/>
-            <p class="inter-light  pt-5 ">Furniture</p>
-        </div>
-        <div class="border border-zinc-300 px-13 py-5 rounded-md cursor-pointer">
-            <img src="./Category-Camera.svg"/>
-            <p class="inter-light  pt-5 ">Camera</p>
-        </div>
-        <div class="border border-zinc-300 px-13 py-5 rounded-md cursor-pointer">
-            <img src="./Category-Gamepad.svg"/>
-            <p class="inter-light  pt-5 ">Game</p>
-        </div>
-        <div class="border border-zinc-300 px-10 py-5 rounded-md cursor-pointer">
-            <img class="pl-4" src="./Category-Headphone.svg"/>
-            <p class="inter-light  pt-5 ">Headphone</p>
-        </div>
+
     </div>
     <div class="text-gray-300 mx-40 mt-30"><hr/></div>
     <div class=" flex items-center gap-4 mt-20 mx-40">
@@ -72,32 +95,324 @@
     <div class="px-40 mt-5">
         <p class="inter-semibold text-[40px]">Explore Our Products</p>
     </div>
-    <div>
-        <div>
-            <img src="./71RdoeXxtrL 1.svg"/>
+        <div class="grid grid-cols-4 px-40 py-20 gap-3 ">
+                <div class="flex flex-col gap-2 cursor-pointer pb-10 group  product-item hidden">
+                    <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                        <img class="w-50 h-50 object-contain" src="./a24fe4e11182caaf3eef65df4ebfb90e-2.jpg"/>
+                        <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
+                            <p class="text-white font-semibold">Add To Basket</p>
+                        </div>
+                    </div>
+                    <p class="inter-light">Men's Casual Shirt</p>
+                    <p class="text-[#DB4444]">29.99$</p>
+                </div>
+
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./51KvG-bDAdL.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+            <p class="inter-light">Organic Green Tea</p>
+            <p class="text-[#DB4444]">9.99$</p>
         </div>
-        <div>
-            <img src="./eos-250d-03-500x500 1.svg"/>
+
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./81X+2yNe9WL._UF1000,1000_QL80_.jpg"/>
+                
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+            <p class="inter-light">Children's Story Book Set</p>
+            <p class="text-[#DB4444]">24.99$</p>
         </div>
-        <div>
-            <img src="./ideapad-gaming-3i-01-500x500 1.svg"/>
+
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-80 h-80 object-contain" src="./images-3.jpeg"/>
+                
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 
+                            group-hover:opacity-100 duration-300 flex justify-center">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+            <p class="inter-light">Men's Running Shoes</p>
+            <p class="text-[#DB4444]">59.99$</p>
         </div>
-        <div>
-            <img src="./e7bdd11662ea1dfc2d615a5bb054e139a764f306.png"/>
+
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./lepower-tec-desk-lamp-for-office-black.jpg"/>
+                
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 
+                            group-hover:opacity-100 duration-300 flex justify-center">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+            <p class="inter-light">LED Desk Lamp</p>
+            <p class="text-[#DB4444]">34.99$</p>
         </div>
-        <div>
-            <img src="./New-Mercedes-Benz-Gtr-Licensed-Ride-on-Car-Kids-Electric-Toy-Car 1.svg"/>
+
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./VH4IV_SQ1_0000000004_BLACK_SLf.jpeg"/>
+                
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+            <p class="inter-light">Wireless Bluetooth Headphones</p>
+            <p class="text-[#DB4444]">129.99$</p>
         </div>
-        <div>
-            <img src="./Copa_Sense 1.svg"/>
+
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./Jade-Yoga-LevelOne-Mat-Classic-Purple-Flat_1200x1200.jpg"/>
+                
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+            <p class="inter-light">Yoga Mat</p>
+            <p class="text-[#DB4444]">19.99$</p>
         </div>
-        <div>
-            <img src="./GP11_PRD3 1.svg"/>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./DorisChhair_3.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Modern Wooden Chair</p>
+            <p class="text-[#DB4444]">89.99$</p>
         </div>
-        <div>
-            <img src="./698717_Z8A1X_3475_001_100_0000_Light-Reversible-quilted-satin-jacket 1.svg"/>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./PremiumDarkBar_800px_100_quality_8a376c26-6824-4c40-88a0-bc3775bf26ac.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Premium Dark Chocolate</p>
+            <p class="text-[#DB4444]">4.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./MOISTURIZIN-ALOE-VERA-FACE-GEL-100ML-2.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Aloe Vera Moisturizer</p>
+            <p class="text-[#DB4444]">12.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./1028_file_FlexiSpot-Listing-Desk-Standing Desk-E1-264141-Primary Image2.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Ergonomic Office Desk</p>
+            <p class="text-[#DB4444]">179.99$</p>
+        </div>
+
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./81WlvhzCyML._AC_SL1500_.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Kids Building Blocks Set</p>
+            <p class="text-[#DB4444]">22.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./42976592-1.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Bluetooth Portable Speaker</p>
+            <p class="text-[#DB4444]">39.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./Sirius-Toys-Dune-Drifter-High-Speed-Off-Road-Rechargeable-Remote-Control-Car-RC-Toys-Sirius-Toys-Toycra_700x700.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Remote-Control Toy Car</p>
+            <p class="text-[#DB4444]">34.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./61Ton1w0T-L._AC_UF1000,1000_QL80_.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Cookbook: Quick & Easy Meals</p>
+            <p class="text-[#DB4444]">19.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./round-natural-wicker-laundry-basket-p929-3612_image.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Laundry Storage Basket</p>
+            <p class="text-[#DB4444]">17.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./3252225-l_26.png"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Men's Winter Jacket</p>
+            <p class="text-[#DB4444]">99.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./Bio-Amla-Herbal-Shampoo-280ml-1.png"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Herbal Shampoo</p>
+            <p class="text-[#DB4444]">10.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./523049_0_70.jpeg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Women's Winter Jacket</p>
+            <p class="text-[#DB4444]">89.99$</p>
+        </div>
+
+        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./calla-coffee-table-h12199-202428-0010-calla-coffee-table-48-z.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Wooden Coffee Table</p>
+            <p class="text-[#DB4444]">129.99$</p>
         </div>
     </div>
+    <div class="relative w-full">
+        <button id="viewMoreBtn" class="px-10 py-5 inter-medium text-white cursor-pointer bg-[#DB4444] mx-auto block">View More</button>
+        <button id="yuxariBtn"> <img class="px-5 py-5 bg-zinc-100 rounded-full absolute right-40 top-1/2 -translate-y-1/2 cursor-pointer"  src="./Vector-2.svg"/></button>
+        
+    </div>
+    <div class="flex justify-center pt-50 mx-20 gap-75 pb-30">
+        <div class="flex items-center flex-col ">
+            <img class="bg-black border border-zinc-300 rounded-full border-8 py-2 px-2" src="./icon-delivery.svg" />
+            <p class="pt-6 text-xl inter-semibold ">FREE AND FAST DELIVERY</p>
+            <p class="pt-2  text-xs inter text-zinc-500">Free delivery for all orders over $140</p>
+        </div>
+        <div   class="flex items-center flex-col ">
+            <img  class="bg-black border border-zinc-300 rounded-full border-8 py-2 px-2" src="./Icon-Customer service.svg" />
+            <p class="pt-6 text-xl inter-semibold ">24/7 CUSTOMER SERVICE</p>
+            <p class="pt-2  text-xs inter text-zinc-500">Friendly 24/7 customer support</p>
+        </div>
+        <div  class="flex items-center flex-col ">
+            <img  class="bg-black border border-zinc-300 rounded-full border-8 py-2 px-2" src="./Icon-secure.svg" />
+            <p class="pt-6 text-xl inter-semibold ">MONEY BACK GUARANTEE</p>
+            <p class="pt-2  text-xs inter text-zinc-500">We reurn money within 30 days</p>
+        </div>
+        
+    </div>
+    <div class="flex bg-black px-30 pt-15 pb-20 gap-38 ">
+        <div class="flex flex-col  gap-5">
+            <p class="text-white inter-semibold text-2xl">Exclusive</p>
+            <p class="text-white inter text-xl">Subscribe</p>
+            <p class="text-white inner text-xs ">Get 10% off your first order</p>
+            <div class="flex  border border-white py-2 px-6  gap-5  ">
+                <p class="text-zinc-700">Enter your email</p>
+                <img src="./Vector-5.svg"/>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl" >Support</p>
+            <p class="text-white inter text-xs">111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</p>
+            <p class="text-white inter text-xs">exclusive@gmail.com</p>
+            <p class="text-white inter text-xs">+88015-88888-9999</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Account</p>
+            <p class="text-white inter text-xs">My Account</p>
+            <p class="text-white inter text-xs">Login / Register</p>
+            <p class="text-white inter text-xs">Basket</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Quick Link</p>
+            <p class="text-white inter text-xs">Privacy Policy</p>
+            <p class="text-white inter text-xs">Terms Of Use</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Download App</p>
+            <p class="text-zinc-500 inter text-xs">Save $3 with App New User Only</p>
+            <div class="flex">
+                <img src="./Qrcode 1.svg"/>
+                <div class="flex flex-col pt-2">
+                    <img src="./download-appstore.svg"/>
+                    <img src="./png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.svg"/>
+                </div>
+            </div>
+            <div class="flex gap-6 ">
+                <img src="./Icon-Facebook.svg" >
+                <img src="./Icon-Twitter.svg" >
+                <img src="./icon-instagram.svg" >
+                <img src="./Icon-Linkedin.svg" >
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
 </html>
