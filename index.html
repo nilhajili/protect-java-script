@@ -16,9 +16,9 @@
             <p class="inter-semibold text-[28px]">Exclusive</p>
         </div>
 
-        <div class="bg-zinc-100 flex items-center py-2 px-2 gap-10">
-            <p class="inter-light text-xs inter text-zinc-500">What are you looking for?</p>
-            <img class="w-5 h-5 stroke-3" src="./search-2.svg">
+       <div class="bg-zinc-100 flex items-center py-2 px-2 gap-2 rounded-md w-80">
+            <input  class="inter-light text-xs text-zinc-500 flex-1 outline-none bg-transparent"  placeholder="What are you looking for?" type="text" id="searchInput"/>
+            <img class="w-5 h-5" src="./search-2.svg" alt="search icon">
         </div>
 
         <div class="flex gap-3 px-6">
@@ -31,128 +31,181 @@
     <div class="flex items-center gap-4 mt-20 mx-40">
     <p class="w-5 h-11 rounded-md bg-[#DB4444]"></p>
     <p class="text-[#DB4444] inter-medium">Categories</p>
-</div>
 
-    <div class="mx-40 mt-10">
-        <div class="flex gap-10">
+</div>
+    <div class="px-40 mt-5">
+        <p class="inter-semibold text-[40px]">Browse By Category</p>
+    </div>
+
+    <div  class="mx-40 mt-10">
+        <div   class="flex gap-10">
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Electronics">
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center category" id="Electronics">
                 <img src="./Category-CellPhone.svg" class="w-12 h-12" />
-                <p class="inter-light pt-5 text-center">Electronics</p>
+                <p class="inter-light pt-5 text-center ">Electronics</p>
             </div>
             </button>
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Furniture">
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center category" id="Furniture">
                 <img src="./armchair-3.svg" class="w-12 h-12" />
                 <p class="inter-light pt-5 text-center">Furniture</p>
             </div>
             </button>
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer  flex flex-col items-center justify-center" id="Toys">
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer  flex flex-col items-center justify-center category" id="Toys">
                 <img src="./shapes.svg" class="w-12 h-12" />
                 <p class="inter-light pt-5 text-center">Toys</p>
                 </div>
             </button>
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer  flex flex-col items-center justify-center" id="Books">
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer  flex flex-col items-center justify-center category" id="Books">
                 <img src="./library-big.svg" class="w-12 h-12" />
                 <p class="inter-light pt-5 text-center">Books</p>
                 </div>
             </button>
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center"id="Beauty" >
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center category"id="Beauty" >
                 <img src="./spray-can.svg" class="w-12 h-12" />
                 <p class="inter-light pt-5 text-center">Beauty</p>
             </div>
             </button>
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Clothing">
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center category" id="Clothing">
                 <img src="./shirt.svg" class="w-12 h-12" />
                 <p class="inter-light pt-5 text-center">Clothing</p>
             </div>
             </button>
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Sports">
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center category" id="Sports">
                 <img src="./bike.svg" class="w-12 h-12" />
                 <p class="inter-light pt-5 text-center">Sports</p>
             </div>
             </button>
             <button>
-                <div class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center" id="Groceries">
+                <div  class="border border-zinc-300 w-[140px] h-[140px] rounded-md cursor-pointer flex flex-col items-center justify-center category" id="Groceries">
                 <img src="./apple.svg" class="w-12 h-12" />
                 <p class="inter-light pt-5 text-center">Groceries</p>
             </div>
             </button>
             
         </div>
-
+        <!-- ___________ Blur elemeliyem -->
     </div>
+        <div id="searchOverlay" class="fixed inset-0 hidden z-50 flex flex-col items-center p-10 overflow-auto bg-black/50 backdrop-blur-lg backdrop-brightness-75">>
+        <h1 id="searchTitle" class="text-3xl text-white mb-8"></h1>
+        <div id="searchResults" class="grid grid-cols-1 grid-cols-4 gap-4 w-full max-w-6xl"></div>
+    </div>
+    <!-- __________ -->
     <div class="text-gray-300 mx-40 mt-30"><hr/></div>
-    <div class=" flex items-center gap-4 mt-20 mx-40">
-        <p class="w-5 h-11  rounded-md bg-[#DB4444]"></p>
-        <p class="text-[#DB4444] inter-medium ">Our Products</p>
-    </div>
-    <div class="px-40 mt-5">
-        <p class="inter-semibold text-[40px]">Explore Our Products</p>
-    </div>
-        <div class="grid grid-cols-4 px-40 py-20 gap-3 ">
-                <div class="flex flex-col gap-2 cursor-pointer pb-10 group  product-item hidden">
-                    <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
-                        <img class="w-50 h-50 object-contain" src="./a24fe4e11182caaf3eef65df4ebfb90e-2.jpg"/>
-                        <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
-                            <p class="text-white font-semibold">Add To Basket</p>
-                        </div>
+
+<div class="flex items-center gap-4 mt-20 mx-40">
+    <p class="w-5 h-11 rounded-md bg-[#DB4444]"></p>
+    <p class="text-[#DB4444] inter-medium">Our Products</p>
+</div>
+
+<div class="px-40 mt-5">
+    <p class="inter-semibold text-[40px]">Explore Our Products</p>
+</div>
+ <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-40 mt-10">
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Men/s Casual Shirt",
+                "description":"Comfortable cotton shirt perfect for everyday wear, available in multiple colors.",
+                "price": 29.99,
+                "images": ["./a24fe4e11182caaf3eef65df4ebfb90e-2.jpg","https://img.kwcdn.com/product/fancy/61fec0c5-adcb-472d-860d-8319aaaae27b.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"]
+            }'>
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                    <img class="w-50 h-50 object-contain" src="./a24fe4e11182caaf3eef65df4ebfb90e-2.jpg"/>
+                    <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
+                        <p class="text-white font-semibold">Add To Basket</p>
                     </div>
-                    <p class="inter-light">Men's Casual Shirt</p>
-                    <p class="text-[#DB4444]">29.99$</p>
                 </div>
+            <p class="inter-light">Men's Casual Shirt</p>
+            <p class="text-[#DB4444]">29.99$</p>
+        </div>
 
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+        <div 
+        class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+        onclick="openProduct(this)"
+        data-product='{
+            "title": "Organic Green Tea",
+            "description":"Premium organic green tea leaves, rich in antioxidants and flavor.",
+            "price": 9.99,
+            "images": ["./51KvG-bDAdL.jpg","https://organicindia.com/cdn/shop/files/classic-pack-of-2.jpg?v=1702528164"]}'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./51KvG-bDAdL.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
                     <p class="text-white font-semibold">Add To Basket</p>
                 </div>
             </div>
-            <p class="inter-light">Organic Green Tea</p>
-            <p class="text-[#DB4444]">9.99$</p>
-        </div>
+        <p class="inter-light">Organic Green Tea</p>
+        <p class="text-[#DB4444]">9.99$</p>
+    </div>
 
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                            "title": "Children/s Story Book Set",
+                            "description": "Set of 5 illustrated storybooks suitable for children aged 4-8.",
+                            "price": 24.99,
+                            "images": [
+                                "./81X+2yNe9WL._UF1000,1000_QL80_.jpg",
+                                "https://images-eu.ssl-images-amazon.com/images/I/91HVfyTvduL._AC_UL600_SR600,600_.jpg"
+                            ]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./81X+2yNe9WL._UF1000,1000_QL80_.jpg"/>
-                
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
                     <p class="text-white font-semibold">Add To Basket</p>
                 </div>
-            </div>
-            <p class="inter-light">Children's Story Book Set</p>
-            <p class="text-[#DB4444]">24.99$</p>
         </div>
+        <p class="inter-light">Children's Story Book Set</p>
+        <p class="text-[#DB4444]">24.99$</p>
+    </div>
 
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+                class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+                onclick="openProduct(this)"
+                data-product='{
+                    "title": "Men/s Running Shoes",
+                    "description": "Lightweight and comfortable running shoes suitable for all terrains.",
+                    "price": 59.99,
+                    "images": [
+                        "./images-3.jpeg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjxcl-5YBtrB4O0EQVw0lnCfOIN4NddTpspst9I2Mp2G3m4gasuW5sy3SbX_S84MDxvp0&usqp=CAU"
+                    ]
+                }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-80 h-80 object-contain" src="./images-3.jpeg"/>
-                
-                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 
-                            group-hover:opacity-100 duration-300 flex justify-center">
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
                     <p class="text-white font-semibold">Add To Basket</p>
                 </div>
-            </div>
-            <p class="inter-light">Men's Running Shoes</p>
-            <p class="text-[#DB4444]">59.99$</p>
         </div>
+        <p class="inter-light">Men's Running Shoes</p>
+        <p class="text-[#DB4444]">59.99$</p>
+    </div>
 
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+       <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "LED Desk Lamp",
+                "description":"Adjustable LED desk lamp with multiple brightness levels and energy saving mode.",
+                "price": 34.99,
+                "images": ["./lepower-tec-desk-lamp-for-office-black.jpg","https://m.media-amazon.com/images/I/81kHHhPnS-L._UF894,1000_QL80_.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./lepower-tec-desk-lamp-for-office-black.jpg"/>
-                
-                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 
-                            group-hover:opacity-100 duration-300 flex justify-center">
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
                     <p class="text-white font-semibold">Add To Basket</p>
                 </div>
             </div>
@@ -161,10 +214,18 @@
         </div>
 
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Wireless Bluetooth Headphones",
+                "description":"High-quality over-ear headphones with noise cancellation and 30-hour battery life.",
+                "price": 129.99,
+                "images": ["./VH4IV_SQ1_0000000004_BLACK_SLf.jpeg","https://static.wixstatic.com/media/5d5913_8461752f1c8b400fb0fe57759c6da4d6~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg"]
+            }' >
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./VH4IV_SQ1_0000000004_BLACK_SLf.jpeg"/>
-                
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
                     <p class="text-white font-semibold">Add To Basket</p>
                 </div>
@@ -174,10 +235,17 @@
         </div>
 
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Yoga Mat",
+                "description":"Non-slip yoga mat with comfortable cushioning, ideal for home or gym use.",
+                "price": 19.99,
+                "images": ["./Jade-Yoga-LevelOne-Mat-Classic-Purple-Flat_1200x1200.jpg","https://kataandasana.com/cdn/shop/files/PROlite-YOGA-MAT-PURPLE-LOTUS-01.jpg?v=1745323867"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./Jade-Yoga-LevelOne-Mat-Classic-Purple-Flat_1200x1200.jpg"/>
-                
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black opacity-0 group-hover:opacity-100 duration-300 flex justify-center">
                     <p class="text-white font-semibold">Add To Basket</p>
                 </div>
@@ -186,7 +254,15 @@
             <p class="text-[#DB4444]">19.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Modern Wooden Chair",
+                "description":"Elegant and sturdy wooden chair suitable for living rooms or offices.",
+                "price": 89.99,
+                "images": ["./DorisChhair_3.jpg","https://5.imimg.com/data5/SELLER/Default/2024/4/410714316/QL/CF/AV/144555086/wooden-chair-set-500x500.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./DorisChhair_3.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -198,7 +274,16 @@
             <p class="text-[#DB4444]">89.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Premium Dark Chocolate",
+                "description":"Rich 85% cocoa dark chocolate made with natural ingredients.",
+                "price": 4.99,
+                "images": ["./PremiumDarkBar_800px_100_quality_8a376c26-6824-4c40-88a0-bc3775bf26ac.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./PremiumDarkBar_800px_100_quality_8a376c26-6824-4c40-88a0-bc3775bf26ac.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -210,7 +295,16 @@
             <p class="text-[#DB4444]">4.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Aloe Vera Moisturizer",
+                "description":"Hydrating face and body moisturizer suitable for all skin types.",
+                "price": 12.99,
+                "images": ["./MOISTURIZIN-ALOE-VERA-FACE-GEL-100ML-2.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./MOISTURIZIN-ALOE-VERA-FACE-GEL-100ML-2.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -222,20 +316,41 @@
             <p class="text-[#DB4444]">12.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+       <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                    "title": "Ergonomic Office Desk",
+                    "description": "Spacious work desk with cable management and sturdy steel legs.",
+                    "price": 179.99,
+                    "images": [
+                        "https://image.springbeetle.asia/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/1028_file_FlexiSpot-Listing-Desk-Standing%20Desk-E1-264141-Primary%20Image2.jpg",
+                        "https://image.springbeetle.asia/cdn-cgi/image/dpr=1,format=webp,fit=pad/https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/1028_file_FlexiSpot-Listing-Desk-Standing%20Desk-264322-Primary%20Image16.jpg"
+                    ]
+            }'>
+
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./1028_file_FlexiSpot-Listing-Desk-Standing Desk-E1-264141-Primary Image2.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
                     <p class="text-white font-semibold">Add To Basket</p>
                 </div>
             </div>
-
             <p class="inter-light">Ergonomic Office Desk</p>
             <p class="text-[#DB4444]">179.99$</p>
         </div>
 
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Kids Building Blocks Set",
+                "description":"Creativity-boosting building block set with 150 colorful pieces.",
+                "price": 22.99,
+                "images": ["./81WlvhzCyML._AC_SL1500_.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./81WlvhzCyML._AC_SL1500_.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -247,7 +362,58 @@
             <p class="text-[#DB4444]">22.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+         <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Smart Home Security Camera",
+                "description":"1080p indoor security camera with motion detection and night vision.",
+                "price": 49.99,
+                "images": ["https://cdn.evance.me/portal/web/739/content/images/Link2Home/1024mw/L2H-ODRCAMPT2-SMARTCAMERA-A.jpg","https://cdn.evance.me/portal/web/739/content/images/Link2Home/1024mw/L2H-ODRCAMPT2-SMARTCAMERA-D.jpg"]
+            }'>
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./L2H-ODRCAMPT2-SMARTCAMERA-A.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Smart Home Security Camera</p>
+            <p class="text-[#DB4444]">49.99$</p>
+        </div>
+
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Adjustable Dumbbell Set",
+                "description":"Pair of adjustable dumbbells ideal for home workouts.",
+                "price": 59.99,
+                "images": ["https://cdn.evance.me/portal/web/739/content/images/Link2Home/1024mw/L2H-ODRCAMPT2-SMARTCAMERA-A.jpg","https://cdn.evance.me/portal/web/739/content/images/Link2Home/1024mw/L2H-ODRCAMPT2-SMARTCAMERA-D.jpg"]
+            }'>
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./Adjustable-Dumbbell-22lb-44lb-52lb-Single-Dumbbell-Set-with-Tray-for-Workout-Strength-Training-Fitness_7cd1a134-f32e-418d-aba1-ddd5a6dd0695.a96d82646e3418ddc79e5cac904133c8.jpeg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Adjustable Dumbbell Set</p>
+            <p class="text-[#DB4444]">59.99$</p>
+        </div>
+
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Bluetooth Portable Speaker",
+                "description":"Compact speaker with deep bass and 10-hour battery life.",
+                "price": 39.99,
+                "images": ["./42976592-1.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./42976592-1.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -259,7 +425,16 @@
             <p class="text-[#DB4444]">39.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Remote-Control Toy Car",
+                "description":"High-speed RC car with rechargeable battery and durable build.",
+                "price": 34.99,
+                "images": ["./Sirius-Toys-Dune-Drifter-High-Speed-Off-Road-Rechargeable-Remote-Control-Car-RC-Toys-Sirius-Toys-Toycra_700x700.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./Sirius-Toys-Dune-Drifter-High-Speed-Off-Road-Rechargeable-Remote-Control-Car-RC-Toys-Sirius-Toys-Toycra_700x700.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -271,7 +446,16 @@
             <p class="text-[#DB4444]">34.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Cookbook: Quick & Easy Meals",
+                "description":"Collection of simple, delicious recipes for busy weekdays."
+                "price": 19.99,
+                "images": ["./61Ton1w0T-L._AC_UF1000,1000_QL80_.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./61Ton1w0T-L._AC_UF1000,1000_QL80_.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -283,7 +467,16 @@
             <p class="text-[#DB4444]">19.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Laundry Storage Basket",
+                "description":"Foldable and durable fabric laundry basket with handles.",
+                "price": 17.99,
+                "images": ["./round-natural-wicker-laundry-basket-p929-3612_image.jpg"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./round-natural-wicker-laundry-basket-p929-3612_image.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -295,7 +488,37 @@
             <p class="text-[#DB4444]">17.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Adventure Novel",
+                "description":"Best-selling novel with an immersive world and rich characters.",
+                "price": 17.99,
+                "images": ["https://m.media-amazon.com/images/I/71ua+4DewoL._AC_UF894,1000_QL80_.jpg"]
+            }'>
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./71ua+4DewoL._AC_UF894,1000_QL80_.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Adventure Novel</p>
+            <p class="text-[#DB4444]">17.99$</p>
+        </div>
+
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Men\s Winter Jacket",
+                "description":"Lightweight winter jacket",
+                "price": 99.99,
+                "images": ["./3252225-l_26.png","https://hypostore.com/media/catalog/product/cache/231ccaba27ed7e117e92f600b7ac6d98/3/2/3252225-l_25.png"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./3252225-l_26.png"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -307,7 +530,36 @@
             <p class="text-[#DB4444]">99.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Car Phone Mount",
+                "description":"Universal magnetic phone mount for dashboards and windshields.",
+                "price": 14.99,
+                "images": ["https://www.elago.com/cdn/shop/files/car_mount_for_phone_best_magsafe_phone_mount_for_car.jpg?v=1739171658","https://www.elago.com/cdn/shop/products/MOUNT-MAGSAFE-DGY_US.jpg?v=1713464130&width=3000"]
+            }'>
+            <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
+                <img class="w-50 h-50 object-contain" src="./car_mount_for_phone_best_magsafe_phone_mount_for_car.jpg"/>
+                <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                    <p class="text-white font-semibold">Add To Basket</p>
+                </div>
+            </div>
+
+            <p class="inter-light">Car Phone Mount</p>
+            <p class="text-[#DB4444]">14.99$</p>
+        </div>
+
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Herbal Shampoo",
+                "description":"Natural shampoo made with botanical extracts and no parabens.",
+                "price": 10.99,
+                "images": ["./Bio-Amla-Herbal-Shampoo-280ml-1.png"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./Bio-Amla-Herbal-Shampoo-280ml-1.png"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -319,7 +571,16 @@
             <p class="text-[#DB4444]">10.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Women/s Winter Jacket",
+                "description":"Warm and lightweight insulated jacket suitable for cold weather.",
+                "price": 89.99,
+                "images": ["https://cdni.llbean.net/is/image/wim/523049_0_70","https://cdni.llbean.net/is/image/wim/523049_0_72","https://cdni.llbean.net/is/image/wim/523049_0_73"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./523049_0_70.jpeg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -331,7 +592,16 @@
             <p class="text-[#DB4444]">89.99$</p>
         </div>
 
-        <div class="flex flex-col gap-2 cursor-pointer group product-item hidden">
+
+        <div 
+            class="flex flex-col gap-2 cursor-pointer pb-10 group product-item"
+            onclick="openProduct(this)"
+            data-product='{
+                "title": "Wooden Coffee Table",
+                "description":"Minimalist wooden coffee table perfect for modern living rooms.",
+                "price": 129.99,
+                "images": ["./calla-coffee-table-h12199-202428-0010-calla-coffee-table-48-z.jpg","https://www.westelm.co.uk/site/WE/Product%20Images/calla-coffee-table-h12199-202428-0031-calla-coffee-table-48-z.jpg?resizeid=64&resizeh=1200&resizew=1200","https://www.westelm.co.uk/site/WE/Product%20Images/calla-coffee-table-h12199-202428-0020-calla-coffee-table-48-z.jpg?resizeid=64&resizeh=1200&resizew=1200"]
+            }'>
             <div class="relative w-83 h-83 bg-zinc-100 flex items-center justify-center">
                 <img class="w-50 h-50 object-contain" src="./calla-coffee-table-h12199-202428-0010-calla-coffee-table-48-z.jpg"/>
                 <div class="absolute bottom-0 left-0 w-full py-4 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
@@ -343,6 +613,7 @@
             <p class="text-[#DB4444]">129.99$</p>
         </div>
     </div>
+
     <div class="relative w-full">
         <button id="viewMoreBtn" class="px-10 py-5 inter-medium text-white cursor-pointer bg-[#DB4444] mx-auto block">View More</button>
         <button id="yuxariBtn"> <img class="px-5 py-5 bg-zinc-100 rounded-full absolute right-40 top-1/2 -translate-y-1/2 cursor-pointer"  src="./Vector-2.svg"/></button>

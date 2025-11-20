@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <script defer src="scriptProduct.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-full h-full">
+    <div class="w-full h-full py-10 flex items-center px-40 bg-white sticky top-0 z-50 shadow-md">
+        <div class="pr-220">
+            <p class="inter-semibold text-[28px]">Exclusive</p>
+        </div>
+
+       <div class="bg-zinc-100 flex items-center py-2 px-2 gap-2 rounded-md w-80">
+            <input  class="inter-light text-xs text-zinc-500 flex-1 outline-none bg-transparent"  placeholder="What are you looking for?" type="text" id="searchInput"/>
+            <img class="w-5 h-5" src="./search-2.svg" alt="search icon">
+        </div>
+
+        <div class="flex gap-3 px-6">
+            <a href="./basket.html" class="cursor-pointer"><img src="./shopping-cart.svg"></a>
+            <a href="./login.html" class="cursor-pointer"><img src="./user.svg"></a>
+        </div>
+    </div>
+        <div id="searchOverlay" class="fixed inset-0 hidden z-50 flex flex-col items-center p-10 overflow-auto bg-black/50 backdrop-blur-lg backdrop-brightness-75">>
+            <h1 id="searchTitle" class="text-3xl text-white mb-8"></h1>
+            <div id="searchResults" class="grid grid-cols-1 grid-cols-4 gap-4 w-full max-w-6xl"></div>
+        </div>
+        <div class="text-gray-300"><hr/></div>
+        <div class="flex gap-6 items-start  px-40 pt-30">
+            <div class="flex gap-2">
+                <div id="thumbs" class="flex flex-col gap-2">
+                </div>
+                <img id="main-image" class="w-[500px] h-[600px] object-contain bg-zinc-100 p-2 rounded-lg" />
+            </div>
+            <div class="flex flex-col gap-5">
+                <h1 id="title" class="inter-medium text-[36px] pb-10"></h1>
+                <p id="price" class="text-4xl font-thin inter-small  "></p>
+                 <p id="description" class="inter-small text-[22px] text-zinc-600 pb-5"></p>
+                    <div class="text-gray-300 pb-15 "><hr/></div>
+                    <button class="bg-[#DB4444] text-white w-60 h-16  rounded-lg text-center flex items-center justify-center">Add to Basket</button>
+                <div class="flex flex-col ">
+                    <div class="border border-zinc-300 flex items-center p-4 rounded-lg h-18 mr-70 gap-5">
+                        <img src="./icon-delivery-3.svg" class="w-12 h-12"/>
+                        <div class="flex flex-col justify-center">
+                            <p class="font-semibold">Free Delivery</p>
+                            <p class="text-zinc-600 text-sm">Enter your postal code for Delivery Availability</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-300 flex items-center p-4 rounded-lg h-18 mr-70 gap-5">
+                        <img src="./Icon-return.svg" class="w-12 h-12"/>
+                        <div class="flex flex-col justify-center">
+                            <p class="font-semibold">Return Delivery</p>
+                            <p class="text-zinc-600 text-sm">Free 30 Days Delivery Returns. Details</p>
+                        </div>
+                    </div>
+                </div>
+
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+        <!-- Similar Products -->
+        <div class="flex items-center gap-4 mt-50 mx-40">
+            <p class="w-5 h-11 rounded-md bg-[#DB4444]"></p>
+            <p class="text-[#DB4444] inter-medium">Related Items</p>
+
+        </div>
+         <div class="flex bg-black px-30 pt-15 pb-20 gap-38 ">
+        <div class="flex flex-col  gap-5">
+            <p class="text-white inter-semibold text-2xl">Exclusive</p>
+            <p class="text-white inter text-xl">Subscribe</p>
+            <p class="text-white inner text-xs ">Get 10% off your first order</p>
+            <div class="flex  border border-white py-2 px-6  gap-5  ">
+                <p class="text-zinc-700">Enter your email</p>
+                <img src="./Vector-5.svg"/>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl" >Support</p>
+            <p class="text-white inter text-xs">111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</p>
+            <p class="text-white inter text-xs">exclusive@gmail.com</p>
+            <p class="text-white inter text-xs">+88015-88888-9999</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Account</p>
+            <p class="text-white inter text-xs">My Account</p>
+            <p class="text-white inter text-xs">Login / Register</p>
+            <p class="text-white inter text-xs">Basket</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Quick Link</p>
+            <p class="text-white inter text-xs">Privacy Policy</p>
+            <p class="text-white inter text-xs">Terms Of Use</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Download App</p>
+            <p class="text-zinc-500 inter text-xs">Save $3 with App New User Only</p>
+            <div class="flex">
+                <img src="./Qrcode 1.svg"/>
+                <div class="flex flex-col pt-2">
+                    <img src="./download-appstore.svg"/>
+                    <img src="./png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.svg"/>
+                </div>
+            </div>
+            <div class="flex gap-6 ">
+                <img src="./Icon-Facebook.svg" >
+                <img src="./Icon-Twitter.svg" >
+                <img src="./icon-instagram.svg" >
+                <img src="./Icon-Linkedin.svg" >
+            </div>
+        </div>
+    </div>
+
+   
+
+</body>
+
+</html>
