@@ -175,10 +175,10 @@ async function loadProducts() {
     });
 }
 
-function openProduct(el) {
-    const product = JSON.parse(el.getAttribute("data-product"));
+function openProduct(element) {
+    const product = JSON.parse(element.dataset.product);
     localStorage.setItem("selectedProduct", JSON.stringify(product));
-    window.location.href = "productDetail.html"; // make sure this matches your detail page filename
+    window.location.href = "./productDetail.html";
 }
 
 window.addEventListener("DOMContentLoaded", loadProducts);
