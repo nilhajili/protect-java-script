@@ -40,7 +40,7 @@
                 <p id="price" class="text-4xl font-thin inter-small  "></p>
                  <p id="description" class="inter-small text-[22px] text-zinc-600 pb-5"></p>
                     <div class="text-gray-300 pb-15 "><hr/></div>
-                    <button class="bg-[#DB4444] text-white w-60 h-16  rounded-lg text-center flex items-center justify-center">Add to Basket</button>
+                    <button id="addToBasketBtn" class="bg-[#DB4444] text-white w-60 h-16  rounded-lg text-center flex items-center justify-center">Add to Basket</button>
                 <div class="flex flex-col ">
                     <div class="border border-zinc-300 flex items-center p-4 rounded-lg h-18 mr-70 gap-5">
                         <img src="./icon-delivery-3.svg" class="w-12 h-12"/>
@@ -62,14 +62,12 @@
                  </div>
             </div>
         </div>
-
-        <!-- Similar Products -->
         <div class="flex items-center gap-4 mt-50 mx-40">
             <p class="w-5 h-11 rounded-md bg-[#DB4444]"></p>
             <p class="text-[#DB4444] inter-medium">Related Items</p>
 
         </div>
-        <div id="similarProducts" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mx-40 mt-6"></div>
+        <div id="similarProducts" class="grid grid-cols-4 gap-6 mx-40 mt-12 mb-25"></div>
 
          <div class="flex bg-black px-30 pt-15 pb-20 gap-38 ">
         <div class="flex flex-col  gap-5">

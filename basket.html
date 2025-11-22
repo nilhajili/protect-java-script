@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Basket</title>
+    <script defer src="scriptBasket.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
+<body class="w-full h-full bg-white">
+
+    <div class="w-full h-full py-10 flex items-center px-40 bg-white sticky top-0 z-50 shadow-md">
+        <div class="pr-220">
+            <p class="inter-semibold text-[28px]">Exclusive</p>
+        </div>
+
+        <div class="bg-zinc-100 flex items-center py-2 px-2 gap-2 rounded-md w-80">
+            <input 
+                id="searchInput"
+                type="text" 
+                placeholder="What are you looking for?" 
+                class="inter-light text-xs text-zinc-500 flex-1 outline-none bg-transparent" 
+            />
+            <img class="w-5 h-5" src="./search-2.svg" alt="search icon">
+        </div>
+
+        <div class="flex gap-3 px-6">
+            <a href="./basket.html" class="cursor-pointer"><img src="./shopping-cart.svg"></a>
+            <a href="./login.html" class="cursor-pointer"><img src="./user.svg"></a>
+        </div>
+    </div>
+    <div id="searchOverlay" class="fixed inset-0 hidden z-50 flex flex-col items-center p-10 overflow-auto bg-black/50 backdrop-blur-lg backdrop-brightness-75">
+        <h1 id="searchTitle" class="text-3xl text-white mb-8"></h1>
+        <div id="searchResults" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-6xl"></div>
+    </div>
+    <div class="px-40 mt-6">
+        <button id="clearAllBtn" class="bg-[#DB4444] text-white px-20 py-5 rounded-lg ml-290">
+            Clear All
+        </button>
+    </div>
+    <div id="basketContainer" class="px-40 mt-10 grid grid-cols-4 gap-6"></div>
+    <div class="px-40 mt-10 mb-20 pb-20">
+        <div class="pl-285 flex pt-6 gap-5">
+            <h2 class="text-2xl inner-light pl-3">Total Price:</h2>
+            <p id="totalPrice" class="text-[#DB4444] text-2xl font-xs">$0.00</p>
+        </div>
+    </div>
+
+    <div class="flex bg-black px-30 pt-15 pb-20 gap-38  ">
+        <div class="flex flex-col  gap-5">
+            <p class="text-white inter-semibold text-2xl">Exclusive</p>
+            <p class="text-white inter text-xl">Subscribe</p>
+            <p class="text-white inner text-xs ">Get 10% off your first order</p>
+            <div class="flex  border border-white py-2 px-6  gap-5  ">
+                <p class="text-zinc-700">Enter your email</p>
+                <img src="./Vector-5.svg"/>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl" >Support</p>
+            <p class="text-white inter text-xs">111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</p>
+            <p class="text-white inter text-xs">exclusive@gmail.com</p>
+            <p class="text-white inter text-xs">+88015-88888-9999</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Account</p>
+            <p class="text-white inter text-xs">My Account</p>
+            <p class="text-white inter text-xs">Login / Register</p>
+            <p class="text-white inter text-xs">Basket</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Quick Link</p>
+            <p class="text-white inter text-xs">Privacy Policy</p>
+            <p class="text-white inter text-xs">Terms Of Use</p>
+        </div>
+        <div class="flex flex-col gap-5">
+            <p class="text-white inter-medium text-2xl">Download App</p>
+            <p class="text-zinc-500 inter text-xs">Save $3 with App New User Only</p>
+            <div class="flex">
+                <img src="./Qrcode 1.svg"/>
+                <div class="flex flex-col pt-2">
+                    <img src="./download-appstore.svg"/>
+                    <img src="./png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.svg"/>
+                </div>
+            </div>
+            <div class="flex gap-6 ">
+                <img src="./Icon-Facebook.svg" >
+                <img src="./Icon-Twitter.svg" >
+                <img src="./icon-instagram.svg" >
+                <img src="./Icon-Linkedin.svg" >
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
