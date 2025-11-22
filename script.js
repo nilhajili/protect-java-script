@@ -30,7 +30,6 @@ viewMoreBtn.addEventListener('click', () => {
     visibleCount += 4;
     showProducts();
 });
-
 //______________________ Category 
 const categories = document.querySelectorAll('.category'); 
 const productsContainer = document.getElementById("products-container");
@@ -100,26 +99,20 @@ function renderProducts2(products) {
         productsContainer.appendChild(item);
     });
 }
-
 const searchInput = document.getElementById("searchInput");
-
 async function fetchSearchResults(searchTerm) {
     try {
         if (!searchTerm || searchTerm.length < 2) {
             alert("Please type at least 2 characters");
             return;
         }
-
         const res = await fetch(`https://ilkinibadov.com/api/v1/search?searchterm=${encodeURIComponent(searchTerm)}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
         const result = await res.json();
         const products = result.content || [];
-
         searchOverlay.classList.remove("hidden");
         searchOverlay.classList.add("flex");
-        searchTitle.textContent = `Search results for "${searchTerm}"`;
-
+        searchTitle.textContent = `${searchTerm}`;
         searchResults.innerHTML = "";
         if (products.length === 0) {
             searchResults.innerHTML = `<p class="col-span-4 text-center text-white">No products found</p>`;
@@ -137,12 +130,10 @@ async function fetchSearchResults(searchTerm) {
                 searchResults.appendChild(item);
             });
         }
-
     } catch (err) {
         console.error("Search error:", err);
     }
 }
-
 searchInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         const value = searchInput.value.trim();
@@ -150,35 +141,8 @@ searchInput.addEventListener("keydown", (e) => {
     }
 });
 //_____________
-async function loadProducts() {
-    const res = await fetch("https://ilkinibadov.com/api/v1/products?page=1&limit=24");
-    const data = await res.json();
-
-    const container = document.getElementById("products-container");
-    container.innerHTML = '';
-
-    data.products.forEach(product => {
-        const card = document.createElement('div');
-        card.className = "product-item cursor-pointer flex flex-col gap-2";
-        card.setAttribute("data-product", JSON.stringify(product));
-
-        card.innerHTML = `
-            <div class="w-full h-40 bg-zinc-100 flex items-center justify-center">
-                <img class="w-32 h-32 object-contain" src="${product.images[0]}" />
-            </div>
-            <p class="text-sm">${product.title}</p>
-            <p class="font-bold">$${product.price.toFixed(2)}</p>
-        `;
-
-        card.addEventListener("click", () => openProduct(card));
-        container.appendChild(card);
-    });
-}
-
 function openProduct(element) {
     const product = JSON.parse(element.dataset.product);
     localStorage.setItem("selectedProduct", JSON.stringify(product));
     window.location.href = "./productDetail.html";
 }
-
-window.addEventListener("DOMContentLoaded", loadProducts);
